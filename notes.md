@@ -1,6 +1,6 @@
-## Docker Basics
+# Docker Basics
 
-# to search any tool / image on docker hub
+## to search any tool / image on docker hub
 docker search busybox
 
 docker run -P -d
