@@ -9,3 +9,9 @@ docker run -P -d
 
 docker run -p 80:80
 -p -> (small letter): map the port 80(right side of colon) of container with port 80(left side of colon) of host
+
+### Docker commands
+docker search <image>
+docker run <image_name>
+docker ps -> list containers
+docker images -> list all images
