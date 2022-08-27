@@ -10,8 +10,24 @@ docker run -P -d
 docker run -p 80:80
 -p -> (small letter): map the port 80(right side of colon) of container with port 80(left side of colon) of host
 
+docker run -d <image_name>
+this -d should always be at the very end of command (as a best practice)
+
 ### Docker commands
 docker search <image>
 docker run <image_name>
 docker ps -> list containers
+docker ps -a -> list all containers even they are exited
 docker images -> list all images
+docker stop <container_id> -> stop container
+docker rm <container_id> -> remove container
+docker run -v "$PWD" -> mount current working directory as a volume in container
+Note: we cannot type only ".(dot)" as we have to define absolute path in quotes
+
+
+
+### Verify if nginx/apache web server
+curl localhost
+curl -i localhost -> to add the headers in request
+
+docker run -p 3080:80 -v "$PWD":/var/www/html -d php:apache-buster
