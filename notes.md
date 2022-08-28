@@ -40,3 +40,8 @@ curl localhost
 curl -i localhost -> to add the headers in request
 
 docker run -p 3080:80 -v "$PWD":/var/www/html -d php:apache-buster
+
+
+### How container connects to another container. For example if php/apache container wants to connect with mysql.
+In this case, container required a gateway to connect with another container. This gateway we can find out by executing docker inpect command. Since both containers will be in same network so a gateway IP is required.
+Our local computer is connected to docker daemon(or docker client) using gateway.

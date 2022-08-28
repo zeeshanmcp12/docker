@@ -33,3 +33,16 @@
 
 docker pull php:7.4-apache-buster
 docker pull mysql:5.7
+
+
+### Create file in php/apache container
+cat > index.html << EOF
+
+### download wordpress
+curl -# -LO latest.tar.gz -> -# shows progress bar
+
+### Untar zip file
+tar xzf latest.tar.gz
+
+mv wordpress/* .
+rm  wordpress/* -fr
