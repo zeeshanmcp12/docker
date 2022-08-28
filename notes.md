@@ -28,8 +28,11 @@ docker logs <container_name>
 Note: when docker container starts it send error to standard out and standard error.
 
 docker inspect <container_name> -> to extract the details of containers for example, IP, port, service etc
-docker exec -> execute the command
 docker exec -it <container_name> bash -> start container in interactive mode and execute "bash" command or run shell in the container.
+    - exec -> execute the command
+    - -it -> interactive mode and connect with teletype terminal
+    - <container_name> -> container name
+    - bash -> we want to execute bash command when connect/login with interactive mode. i.e.
 
 
 ### Verify if nginx/apache web server

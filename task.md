@@ -22,6 +22,12 @@
     - Start mysql container and execute below command to log into container
     - docker exec -it mysql bash
     - netstat -antp -> to verify the port is listening on 3306
+    - create database wordpressdb;
+    - grant all on wordpressdb.* to wordpressuser identified by 'wordpresspass';
+        - this 'secret' will be the password for db
+    - flush privileges;
+        - don't exit untill above command otherwise mysql won't apply changes
+    - docker inspect <container_name> -> to see more about container like ip address, network etc
 - php with apache
 
 
