@@ -21,6 +21,7 @@ docker ps -a -> list all containers even they are exited
 docker images -> list all images
 docker stop <container_id> -> stop container
 docker rm <container_id> -> remove container
+docker rm $(docker ps -aq) -> remove all exited containers
 docker run -v "$PWD" -> mount current working directory as a volume in container
 Note: we cannot type only ".(dot)" as we have to define absolute path in quotes
 
