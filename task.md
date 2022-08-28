@@ -13,5 +13,15 @@
 
 
 
+### Related information
+- mysql
+    - mysql port 3306
+    - We need to set mysql password when running mysql container
+    - -e (environment variable) MYSQL_ROOT_PASSWORD='password'
+    - mysql -h localhost -u root -p password -> : if mysql is installed on local system
+    - docker exec -it mysql bash
+- php with apache
+
+
 docker pull php:7.4-apache-buster
 docker pull mysql:5.7

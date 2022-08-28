@@ -24,7 +24,12 @@ docker rm <container_id> -> remove container
 docker rm $(docker ps -aq) -> remove all exited containers
 docker run -v "$PWD" -> mount current working directory as a volume in container
 Note: we cannot type only ".(dot)" as we have to define absolute path in quotes
+docker logs <container_name>
+Note: when docker container starts it send error to standard out and standard error.
 
+docker inspect <container_name> -> to extract the details of containers for example, IP, port, service etc
+docker exec -> execute the command
+docker exec -it <container_name> bash -> start container in interactive mode and execute "bash" command or run shell in the container.
 
 
 ### Verify if nginx/apache web server
