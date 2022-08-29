@@ -20,6 +20,7 @@ docker ps -> list containers
 docker ps -a -> list all containers even they are exited
 docker images -> list all images
 docker stop <container_id> -> stop container
+docker start <container_id> -> start stopped container
 docker rm <container_id> -> remove container
 docker rm $(docker ps -aq) -> remove all exited containers
 docker run -v "$PWD" -> mount current working directory as a volume in container
