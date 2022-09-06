@@ -46,3 +46,11 @@ tar xzf latest.tar.gz
 
 mv wordpress/* .
 rm  wordpress/* -fr
+
+
+### To list the loaded module (for php)
+apachectl -M
+
+a2enmod -> to list the modules available to php
+a2enmod <module_name> which we want to load/enable
+a2enmode rewrite -> then restart apache server (service apache2 restart)...but if we are running this in a container for apache then docker will kill the container because in an image we define an entry point which docker continously monitor either it is live or not. When it see the entry point is not live then it kills the container.
