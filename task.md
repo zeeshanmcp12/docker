@@ -55,3 +55,8 @@ a2enmod -> to list the modules available to php
 a2enmod <module_name> which we want to load/enable
 a2enmode rewrite -> then restart apache server (service apache2 restart)...but if we are running this in a container for apache then docker will kill the container because in an image we define an entry point which docker continously monitor either it is live or not. When it see the entry point is not live then it kills the container.
 
+### To check the owner of the process
+ps aux -> to check the process running in server and their users
+id www-data -> to see the id of user
+ls -ln -> list numeric user and group IDs -> output -> drwxrwxrwx 1 33 33 4096 Sep 17 06:32 html
+
