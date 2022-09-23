@@ -29,6 +29,7 @@ Note: we cannot type only ".(dot)" as we have to define absolute path in quotes
 docker logs <container_name>
 Note: when docker container starts it send error to standard out and standard error.
 docker build -t <image_name> . -> (. dot) means current working directory
+docker volume ls -> list the volumes (persistent storage)
 
 docker inspect <container_name> -> to extract the details of containers for example, IP, port, service etc
 docker exec -it <container_name> bash -> start container in interactive mode and execute "bash" command or run shell in the container.
