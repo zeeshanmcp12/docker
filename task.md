@@ -60,3 +60,7 @@ ps aux -> to check the process running in server and their users
 id www-data -> to see the id of user
 ls -ln -> list numeric user and group IDs -> output -> drwxrwxrwx 1 33 33 4096 Sep 17 06:32 html
 
+### When working with volume
+docker run -p <port:port> -v <volume>:<path_in_container> -d <image_name>
+For example:
+docker run -p 80:80 -v site-data:/var/www/html -d wordpress-site
