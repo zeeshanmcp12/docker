@@ -49,3 +49,13 @@ docker run -p 3080:80 -v "$PWD":/var/www/html -d php:apache-buster
 ### How container connects to another container. For example if php/apache container wants to connect with mysql.
 In this case, container required a gateway to connect with another container. This gateway we can find out by executing docker inpect command. Since both containers will be in same network so a gateway IP is required.
 Our local computer is connected to docker daemon(or docker client) using gateway.
+
+
+### Command specific notes
+We can see running containers by executing `docker ps`.
+How to check if the port of container is mapped with local or not?
+- This we can see from the output of docker ps
+- If it shows some like below then the port is mapped with local
+  - 0.0.0.0:80->80/tcp
+- If it shows something like below then the port in container is exposed but no port is listening on local
+  - 3306/tcp
