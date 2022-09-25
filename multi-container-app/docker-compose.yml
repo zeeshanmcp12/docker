@@ -1,15 +1,27 @@
-db:
-  build: ./db
-  ports:
-    - 3306:3306
-  volumes:
-    - db-data:/var/lib/mysql
+services:
+  db:
+    build: ./db
+    ports:
+      - 3306:3306
+    volumes:
+      - wp-db-data:/var/lib/mysql
+    networks:
+    - wp-network
 
-web:
-  build: ./web
-  ports:
-    - 80:80
-  volumes:
-    - site-data:/var/www/html
-  links:
-    - db:db
+  web:
+    build: ./web
+    ports:
+      - 80:80
+    volumes:
+      - wp-site-data:/var/www/html
+    # links:
+    #   - db:db
+    networks:
+      - wp-network
+
+networks:
+  wp-network:
+
+volumes:
+  wp-site-data:
+  wp-db-data:
