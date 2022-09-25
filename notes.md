@@ -37,6 +37,12 @@ docker exec -it <container_name> bash -> start container in interactive mode and
     - -it -> interactive mode and connect with teletype terminal
     - <container_name> -> container name
     - bash -> we want to execute bash command when connect/login with interactive mode. i.e.
+docker-compose up --build -> build images and start containers
+docker-compose up --build -d -> build images and start in detach mode
+docker-compose start -> when the images has already been built
+docker-compose stop
+docker-compose rm -f -> this also removes the stop containers similar to docker rm <container_name>
+docker-compose -f docker-compose.v3.yml -> -f means compose file if different than default.
 
 
 ### Verify if nginx/apache web server

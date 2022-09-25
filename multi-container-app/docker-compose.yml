@@ -2,10 +2,14 @@ db:
   build: ./db
   ports:
     - 3306:3306
+  volumes:
+    - db-data:/var/lib/mysql
 
 web:
   build: ./web
   ports:
     - 80:80
+  volumes:
+    - site-data:/var/www/html
   links:
     - db:db
